@@ -15,24 +15,28 @@ namespace _1606_
 
         private static void DrawAdv()
         {
+            Thread.Sleep(new Random().Next(1000));
             gate.WaitOne();
             Console.WriteLine("Drawing ad.......");
         }
 
         private static void ShowAllFlights()
         {
-            gate.WaitOne(1000);
+            Thread.Sleep(new Random().Next(1000));
+            gate.WaitOne();
             Console.WriteLine("Showing all flights.......");
         }
 
         private static void DrawClocks()
         {
+            Thread.Sleep(new Random().Next(1000));
             gate.WaitOne();
             Console.WriteLine("Drawing clock.......");
         }
 
         private static void ShowCredentials()
         {
+            Thread.Sleep(new Random().Next(1000));
             gate.WaitOne();
             Console.WriteLine("Please enter user-name password:");
         }
@@ -42,7 +46,7 @@ namespace _1606_
         /// </summary>
         private static void LoadPage()
         {
-            Thread.Sleep(new Random().Next(15000 + 5000));
+            Thread.Sleep(1000);
             Console.WriteLine("Page finished loading............");
 
             gate.Set(); // make the gate go up -- allow entrance
