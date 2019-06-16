@@ -17,6 +17,7 @@ namespace Tasks
                 return 5;
             }, TaskCreationOptions.LongRunning);
             //t.Start();
+            //t.Wait();
             t.RunSynchronously(); // same as Start + Wait
             Console.WriteLine($"result is {t.Result}");
 
